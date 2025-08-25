@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'webproa/css/home.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'webproa/foto/logo-proa.png' %}" class="logoproa" alt="ProA">
+        <a class="logoV">ProA CAPITAL NORTE</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'votaciones' %}">Votaciones</a></li>
+                <li><a href="{% url 'novedades' %}">Novedades</a></li>
+                <li><a href="{% url 'contactos' %}">Contactos</a></li>
+                <li><a href="{% url 'informacion' %}">Nosotros</a></li>
+            </ul>
+       </nav> 
+   </header>
+
+   <section class="zona1">
+         <img src="{% static 'webproa/foto/programacion_1.png' %}" class="foto1" alt="">
+         <div class="texto_encima">
+            <h1>COLEGIO PROA
+                CAPITAL NORTE </h1>
+            <h2>Donde el software se convierte en futuro</h2>
+            <h3>La programación no es solo una materia,
+                es la clave que abre puertas al trabajo,
+                la creatividad y a tu futuro profesional.</h3>
+         </div>    
+    </section>
+    <section class="zona2">
+        <hr>
+        <div class="parte1">
+            <h4>El Colegio PROA Capital Norte no se limita a
+            enseñar programación: construye una experiencia
+            educativa única, organizada y conectada con el
+            mundo real. Cada estudiante recibe una cuenta
+            institucional con dominio @escuelasproa.edu.ar,
+            que abre las puertas a múltiples plataformas
+            educativas y herramientas digitales de nivel profesional.</h4> 
+        </div>
+        
+        <hr>
+        <div class="parte2">
+            <h4>Aquí, el aprendizaje está pensado
+            para que cada paso sume: desde los
+            fundamentos del desarrollo de software
+            hasta el trabajo en equipo,la creatividad
+            y la proyección hacia el mundo laboral.</h4>
+        </div>
+        <br>
+        <hr>
+    </section>
+
+    <section class="zona3">
+    <h1>Un proyecto joven con pasos firmes.</h1>
+    <hr>
+    <div class="aaa">
+        <div class="relato">
+            <p>Desde 2018, cuando abrimos nuestras puertas con el primer curso, no hemos dejado de crecer. Hoy, con generaciones que ya transitan su camino hacia la tercera promoción en 2025, PROA Capital Norte se consolidó como mucho más que una escuela experimental: somos un espacio formativo que combina organización, acompañamiento y una comunidad educativa que potencia el talento de cada estudiante.</p>
+            <p>Más que un colegio, PROA Norte es una oportunidad: un entorno moderno, con aulas equipadas, espacios de trabajo colaborativo y la certeza de que cada estudiante se lleva herramientas útiles para toda la vida.</p> 
+        </div>
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <img src="{% static 'webproa/foto/promo25.png' %}" alt="Promo 3">
+                        </div>
+
+                        <div class="slide slide_2">
+                            <img src="{% static 'webproa/foto/promo24.png' %}" alt="Promo 2">
+                        </div>
+
+                        <div class="slide slide_3">
+                            <img src="{% static 'webproa/foto/promo23.png' %}" alt="Promo 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+
+            <div id="bullets">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>

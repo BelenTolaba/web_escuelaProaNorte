@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.abajo {
+    background-image: linear-gradient(#A8E8F9, #00537A );
+}
+header.abajo .logoV,
+header.abajo a {
+    color: #ffffff;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+body, section {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(#a8e8f9, #002732 );
+    color: #6cadfd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.logoproa {
+    width: 80px;
+    top: 2px;
+    left: 2px;
+}
+.logoV {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.9em;
+    position: absolute;
+    left: 9%;
+    letter-spacing: 0.8px;
+    transition: 1.5s;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 6px;
+}
+       
+nav ul li a {
+    text-decoration: none;
+    color: #e9e9e9;
+    transition: color 0.7s ease;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+       
+nav ul li a:hover {
+    color: #ffffff; 
+    font-size: 1.6em;
+    font-family: Bold, Arial;
+}
+
+
+
+
+
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ffffff; 
+    margin: 40px 0;            
+}
+
+
+
+
+
+
+.zona1 {
+    position: relative; 
+}
+
+.zona1 img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    filter: brightness(50%);
+}
+
+.texto_encima h1 {
+    position: absolute;
+    top: 35%;      
+    left: 2%;    
+    font-size: 4em;
+    color: white;
+    white-space: pre-line; 
+}
+
+.texto_encima h2 {
+    position: absolute;
+    top: 90%;    
+    left: 2%;    
+    font-size: 2em;
+    color: white;
+    text-align: right;
+}
+
+.texto_encima h3 {
+    position: absolute;
+    top: 48%;  
+    right: 6%;   
+    font-family: cursive;
+    font-style: italic; 
+    font-size: 1.3em;
+    color: white;
+    white-space: pre-line; 
+}
+
+
+
+
+
+.zona2 {
+    text-align: center;
+    padding: 3rem 2rem ;
+    background-image: linear-gradient(#d5f6ff, #A8E8F9);
+}
+.zona2 h4 {
+    position: relativa;
+    top: 100%;     
+    left: 2%;   
+    font-size: 0,5em;
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting", cursive;
+    text-align: justify;
+    white-space: pre-line
+}
+
+
+
+
+
+.zona3 {
+    padding: 3rem 2rem;
+    background-color: #013C58;
+    flex-direction: column;
+}
+   
+.zona3 h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+}
+ 
+.aaa {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+   
+.relato {
+    flex: 1 1 400px;   
+    max-width: 600px; 
+    text-align: justify;  
+    background-color: #ffffff;
+    padding: 2em;  
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #9f9f9f;
+    transition: transform 0.3s ease;
+}
+   
+.relato p {
+    color: #000000;
+    font-size: 1rem;
+}
+   
+.relato:hover {
+    transform: translateY(-5px);
+}
+   
+
+
+
+
+
+
+
+#slider {
+    margin: 0 auto;
+    width: 670px;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 20px;   
+    overflow: hidden;
+}
+#slider input[type=radio] {
+    display: none;
+}
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+#slides {
+    padding: 0;
+    border: none;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+#slides .inner {
+    transition: margin-left 800ms cubuc-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 538px;
+    border-radius: 20px;   
+    overflow: hidden;
+}
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #000;
+}
+#slides .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#slides .slide_1 {
+    background: #00171f;
+}
+#slides .slide_2 {
+    background: #003459;
+}
+#slides .slide_3{
+    background: #007EA7;
+}
+#controls {
+    margin: -150px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+#controls label:hover {
+    opacity: 1;
+}
+#slide1:checked ~ #controlls label:nth-child(2),
+#slide2:checked ~ #controlls label:nth-child(3),
+#slide3:checked ~ #controlls label:nth-child(1) {
+    background: url(https://cdn-icons-png.flaticon.com/512/130/130882.png) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+}
+#slide1:checked ~ #controlls label:nth-last-child(2),
+#slide2:checked ~ #controlls label:nth-last-child(3),
+#slide3:checked ~ #controlls label:nth-last-child(1) {
+    background: url(https://cdn-icons-png.flaticon.com/512/130/130884.png) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+}
+#bullets {
+    margin: 100px 0 0;
+    text-align: center;
+}
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3) {
+    background: #444;
+}
+@media screen and (max-width:900px) {
+    #slide1:checked ~ #controlls label:nth-child(2),
+    #slide2:checked ~ #controlls label:nth-child(3),
+    #slide4:checked ~ #controlls label:nth-child(1),
+    #slide1:checked ~ #controlls label:nth-last-child(2),
+    #slide2:checked ~ #controlls label:nth-last-child(3),
+    #slide4:checked ~ #controlls label:nth-last-child(1) {
+        margin: 0;
+    }
+}

@@ -1,0 +1,20 @@
+body {
+    background-color: #213A57;
+    font-family: apple chancery;
+}
+
+.mt-5 h1.mb-4 {
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    border-color: black;
+}
+
+.btn-primary:hover {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
