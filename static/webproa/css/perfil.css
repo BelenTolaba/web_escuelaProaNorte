@@ -1,0 +1,26 @@
+.perfil-card {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.foto-container {
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+.datos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.datos p {
+    margin: 0;
+}

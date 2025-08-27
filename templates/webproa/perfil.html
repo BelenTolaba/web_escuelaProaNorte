@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ datos_publicos.nombre_completo }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'webproa/css/perfil.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm perfil-card">
+            <div class="card-body d-flex align-items-center">
+                <!-- Foto de perfil -->
+                <div class="foto-container me-4">
+                    {% if datos_publicos.foto_perfil %}
+                        <img src="{{ datos_publicos.foto_perfil }}" alt="Foto de perfil" class="foto-perfil">
+                    {% else %}
+                        <img src="{% static 'webproa/images/default-avatar.png' %}" alt="Foto de perfil" class="foto-perfil">
+                    {% endif %}
+                </div>
+
+                <!-- Nombre y datos -->
+                <div class="datos">
+                    <h2 class="mb-2">{{ datos_publicos.nombre_completo }}</h2>
+                    <p><strong>Nombre de usuario:</strong> {{ datos_publicos.username }}</p>
+                    <p><strong>Email:</strong> {{ datos_publicos.email }}</p>
+                    <p><strong>Curso:</strong> {{ datos_publicos.curso }}</p>
+
+                    {% if datos_privados.dni %}
+                        <p><strong>DNI:</strong> {{ datos_privados.dni }}</p>
+                    {% endif %}
+
+                    {% if datos_admin.fecha_registro %}
+                        <p><strong>Fecha de registro:</strong> {{ datos_admin.fecha_registro|date:"d/m/Y H:i" }}</p>
+                    {% endif %}
+
+                    <a href="{% url 'logout' %}" class="btn btn-danger mt-3">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

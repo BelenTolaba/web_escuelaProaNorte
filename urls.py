@@ -6,12 +6,14 @@ from . import views
 
 
 urlpatterns = [
+    path('perfil/', views.perfil, name='perfil'),
+
     path("registro/", views.registro, name="registro"),
     path("login/", views.login_view, name="login"),
     path("logout/", views.logout_view, name="logout"),
 
     path('registrar/', views.registrar_votante, name='registrar_votante'),
-    path('votar/<str:dni>/', views.votar, name='votar'),
+    path('votar/', views.votar, name='votar'),
 
     path("home", views.home, name="home"),
     path("contactos", views.contactos, name="contactos"),
