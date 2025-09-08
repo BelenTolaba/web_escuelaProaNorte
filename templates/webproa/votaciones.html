@@ -13,13 +13,25 @@
 <body>
     <header>
         <img src="{% static 'webproa/foto/logo-proa.png' %}" class="logoproa" alt="ProA">
-        <a class="logoV">ProA CAPITAL NORTE</a>
+        <a class="titulo">ProA CAPITAL NORTE</a>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Inicio</a></li>
                 <li><a href="{% url 'novedades' %}">Novedades</a></li>
                 <li><a href="{% url 'contactos' %}">Contactos</a></li>
                 <li><a href="{% url 'informacion' %}">Nosotros</a></li>
+
+                {% if user.is_authenticated %}
+                    <!-- Usuario logueado -->
+                    <li><a href="{% url 'perfil' %}">Mi Perfil</a></li>
+                {% else %}
+                    <!-- Usuario no logueado -->
+                    <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+
+                    <li  class="sign_up">
+                        <a href="{% url 'registro' %}">Registrarse</a>
+                    </li>
+                {% endif %}
             </ul>
        </nav> 
    </header>
@@ -72,7 +84,7 @@
     
         <p class="fs-5">Elegir es crecer. Votar es transformar. Este año, hacé que tu voz se escuche.</p>
         <p class="fs-5">Tu voz cuenta: hacela valer votando aquí</p>
-        <a href="{% url 'registrar_votante' %}" class="btn btn-primary">Votar</a>
+        <a href="{% url 'verificacion_votante' %}" class="btn btn-primary">Votar</a>
     </section>
 
     

@@ -1,3 +1,4 @@
+/* Fondo degradado igual al registro */
 body {
     background: linear-gradient(135deg, #5671b1 , #002c85 );
     height: 150vh;
@@ -5,19 +6,22 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
+    margin: 0;
 }
+
 
 .register-box {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 40px;
-    width: 400px;
+    width: 420px;
     color: #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     text-align: center;
 }
 
+/* Icono circular arriba */
 .register-box .icon {
     background: #1e3c72;
     border-radius: 50%;
@@ -34,6 +38,7 @@ body {
     color: white;
 }
 
+/* Inputs */
 .register-box input, 
 .register-box select {
     background: rgba(255,255,255,0.2);
@@ -50,25 +55,55 @@ body {
 }
 
 .register-box label {
-    display: none; 
+    font-weight: bold;
+    color: #fff;
 }
 
+/* Botones */
 .btn-custom {
-    background: #2c3e50;
+    background: #1e3c72;
     border: none;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
-    color: #dbdbdb;
+    color: #fff;
     width: 100%;
     transition: 0.3s;
+    text-decoration: none;
+    display: block;
 }
 
 .btn-custom:hover {
-    background: #2a5298;
+    background: #172d57;
+    color: #fff;
 }
 
-.register-box a {
+/* Alertas adaptadas al fondo */
+.alert {
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Texto pequeño */
+small {
+    font-size: 13px;
+    color: #ddd;
+}
+
+
+.btn-outline-light {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
     color: #fff;
-    text-decoration: underline;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #ffffff;
 }

@@ -1,78 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
-
-.abajo {
-    background-image: linear-gradient(#A8E8F9,#FFD35B );
-}
-header.abajo .logoV,
-header.abajo a {
-    color: #272727;
-}
-
-
-
-
 body {
-    font-family: Arial, sans-serif;
-}
-body, section {
     margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #ffffff;
 }
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-image: linear-gradient(#00537A, #F5A201 );
-    color: #6cadfd;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+/**/
+.abajo {
+    background-color: #333f4a86;
+    backdrop-filter: blur(6px);
 }
-.logoproa {
-    width: 80px;
-    top: 2px;
-    left: 2px;
-}
-.logoV {
-    text-decoration: none;
+header.abajo .titulo,
+header.abajo a {
     color: #ffffff;
+}
+/* background-image: linear-gradient(#00537a00, #14929b00 );*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #090a25; 
+    transition: background-color 0.8s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .logoproa {
+    height: 50px;
+}
+header .titulo {
+    text-decoration: none;
+    font-size: 25px;
     font-weight: bold;
-    font-size: 1.9em;
+    color: #fff;
     position: absolute;
-    left: 9%;
+    left: 8%;
     letter-spacing: 0.8px;
     transition: 1.5s;
 }
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+header nav ul {
+    font-size: 20px;
+    list-style: none;
     display: flex;
-}
-nav ul li {
+    gap: 20px;
     margin: 0 6px;
 }
-       
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
-    color: #e9e9e9;
-    transition: color 0.7s ease;
-    font-weight: bold;
-    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s;
 }
-       
-nav ul li a:hover {
-    color: #ffffff; 
-    font-size: 1.6em;
-    font-family: Bold, Arial;
+header nav ul li a:hover {
+    color: #b0b0b0;
 }
+header .sign_up {
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 0.5px 15px;
+}
+header .sign_up:hover {
+    border: 1px solid #b0b0b0;
+    border-radius: 6px;
+    padding: 0.5px 15px;
+}     
+
+
+
+
+
+
 
 
 

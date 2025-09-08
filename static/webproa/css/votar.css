@@ -1,0 +1,74 @@
+/* Fondo degradado */
+body {
+    background: linear-gradient(135deg, #245c68 , #00a8aa );
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px; /* limita ancho total */
+}
+
+.row.g-4 {
+    row-gap: 30px; /* fuerza espacio uniforme */
+}
+
+/* Card de votación */
+.vote-card {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto; /* centra cada card */
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%; /* hace que todas tengan misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.vote-card input[type="radio"] {
+    display: none; 
+}
+.vote-card.active {
+    border: 2px solid #000000;
+    background: #f3f0ff;
+}
+.vote-card h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+}
+.vote-card img {
+    width: 100%;            
+    height: 180px;        /* más alto para que no quede raro */
+    object-fit: cover;     
+    border-radius: 12px;     
+    transition: transform 0.3s ease-in-out;
+    object-position: center;
+    margin-bottom: 10px; /* espacio entre imagen y título */
+}
+
+/* boton */
+/* Botón centrado y con buen espaciado */
+.confirmar-btn {
+    background: linear-gradient(90deg, #ffffffd0, #ffffffd0); 
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    padding: 12px 30px; /* un poco más de padding */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    margin-top: 20px;
+}
+
+.confirmar-btn:hover {
+    background: linear-gradient(90deg, #f7f7f7f0, #f7f7f7f0);
+    color: #000;
+    transform: scale(1.05); 
+}
